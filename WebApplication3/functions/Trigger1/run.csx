@@ -8,10 +8,12 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
     string name = req.GetQueryNameValuePairs()
         .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
         .Value;
+    //test 
 
+    //test
     // Get request body
     dynamic data = await req.Content.ReadAsAsync<object>();
-
+    
     // Set name to query string or body data
     name = "";
 
